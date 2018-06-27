@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<title>REGISTRATION FORM</title>
+<style>
+body
+{
+background-image:url("index.jpg");
+background-repeat: no-repeat;
+background-size:1100px 650px; 
+ margin: auto;
+ color:black;
+}
+</style>
+<script language="Javascript">
+function getvalues()
+{
+alert("submitted");
+var fname=document.firstform.name.value;
+document.getElementById("display").innerHTML="firstname: " + fname;
+}
+</script>
+</head>
+<body>
+
+<CENTER>
+<h1 style="color:tomato;">REGISTRATION FORM</H1></CENTER>
+<form action="#" name="firstform">
+<p id="display"></p>
+STUDENT NAME:
+<input type="text" name="name" required>
+<br><br>
+ADDRESS:
+<textarea name="message" rows="3" cols="20" required> 
+</textarea>
+<BR><br>
+GENDER:<BR>
+<input type="radio" name="gender" value="male">MALE
+<input type="radio" name="gender" value="female">FEMALE
+<BR><BR>
+COURSES:
+<input list="course" name="course" cols="40" required>
+  <datalist id="course">
+    <option value="IT">
+    <option value="CSE">
+    <option value="BME">
+    <option value="ECE">
+    <option value="EIE">
+  </datalist>
+<BR><BR>
+SUBJECTS:
+<BR>
+<input type="checkbox" name="sub1" value="OS">OS
+<br>
+<input type="checkbox" name="sub2" value="UNIX">UNIX 
+<BR>
+<input type="checkbox" name="sub3" value="CADA">CADA
+<br>
+<input type="checkbox" name="sub4" value="C#">C# 
+<BR><BR>
+COUNTRY:
+ <select name="COUNTRY" required>
+    <option value="India">India</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="China">China</option>
+    <option value="Italy">Italy</option>
+  </select>
+<BR><BR><CENTER>
+<button type="button" onclick="getvalues(); return false;">SUBMIT</button>
+<button type="button" onclick="alert('CANCELLED')">CANCEL</button>
+</CENTER>
+</form>
+</body>
+</html>

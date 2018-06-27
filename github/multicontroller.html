@@ -1,0 +1,35 @@
+
+<!DOCTYPE HTML>
+<html>
+<script src="angular.min.js"></script>
+<body ng-app="myApp">
+<div  ng-controller="formCtrl" ng-show="login">  
+<center>LOGIN FORM<br><br>
+    UserName: <input type="text" ng-model="username" placeholder="enter your name"><br><br>
+    password: <input type="text" ng-model="password" placeholder="password"><br><br>
+  <button ng-click="submit()">submit</button> </center> 
+</div>
+<div ng-controller="secondcont" ng-show="home" ng-init=" myVar='file:///C:/meanstack/HTML/g3.jpg'">
+<center><h3>WELCOME YOU!!!</h3>
+</center>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope,$rootScope) {
+$scope.login=true;
+$rootScope.home=false;
+    $scope.username = " ";
+    $scope.password=" ";
+   $scope.submit=function(){
+   if($scope.username=="admin" && $scope.password =="admin"){
+  $scope.login=false;
+  $rootScope.home=true;  
+}
+}
+});
+app.controller('secondcont',function($scope){
+});
+</script>
+</body>
+</html>
+
