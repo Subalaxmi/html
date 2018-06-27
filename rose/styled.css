@@ -1,0 +1,24 @@
+h2{
+	font-weight:lighter;
+	color:red;
+}
+p,pre
+{
+	font-size: 100%;
+    font-style:normal;
+    font-family:"Times New Roman";
+}
+/*body{
+    height: 200px;
+    background: red; 
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+}*/
+h1{
+	font-style:oblique;
+	text-shadow:2px 2px black;
+}
+body{
+	background-image:url("1.jpg");
+	background-repeat:no-repeat;
+	background-position:right;
+}
